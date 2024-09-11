@@ -7,7 +7,7 @@ import { useGetCryptosQuery } from "../services/cryptoApi";
 const Cryptocurrencies = ({ simplified }) => {
     const count = simplified ? 10 : 100;
     const { data: cryptosList, isFetching } = useGetCryptosQuery(count);
-    const [cryptos, setCryptos] = useState([]);
+    const [cryptos, setCryptos] = useState();
     const [searchTerm, setSearchTerm] = useState("");
 
     useEffect(() => {
@@ -27,7 +27,9 @@ const Cryptocurrencies = ({ simplified }) => {
                 <div className="search-crypto">
                     <Input
                         placeholder="Search Cryptocurrency"
-                        onChange={(e) => setSearchTerm(e.target.value)}
+                        onChange={(e) =>
+                            setSearchTerm(e.target.value.toLowerCase())
+                        }
                     />
                 </div>
             )}
@@ -39,9 +41,12 @@ const Cryptocurrencies = ({ simplified }) => {
                         sm={12}
                         lg={6}
                         className="crypto-card"
-                        key={index}
+                        key={currency.uuid}
                     >
-                        <Link to={`/crypto/${currency.id}`}>
+                        <Link
+                            key={currency.uuid}
+                            to={`/crypto/${currency.uuid}`}
+                        >
                             <Card
                                 title={`${currency.rank}. ${currency.name}`}
                                 extra={
