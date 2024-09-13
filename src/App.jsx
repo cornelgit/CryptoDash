@@ -49,8 +49,8 @@ const App = () => {
                         level={5}
                         style={{ color: "white", textAlign: "center" }}
                     >
-                        Crypto Dash <br />
-                        All rights reserved
+                        © Crypto Dash <br />
+                        All rights reserved - Cornel Stoica
                     </Typography.Title>
                     <Space>
                         <Link to="/">Home</Link>
