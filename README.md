@@ -38,7 +38,7 @@ To clone the project and view its source code:
 
 ## Requirements
 
-This app uses a the CoinRanking API endpoint CoinRanking for crypto stats and news. Visit RapidAPI.com to get your free keys and place those in a created .env file in root directory.
+This app uses the CoinRanking API endpoint CoinRanking for crypto stats and news. Visit rapidapi.com to get your free keys and place those in a created .env file in root directory.
 
 ## Contributing
 
