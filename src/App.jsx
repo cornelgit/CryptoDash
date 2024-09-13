@@ -3,7 +3,6 @@ import { Routes, Route, Link } from "react-router-dom";
 import { Layout, Typography, Space } from "antd";
 import {
     Navbar,
-    Exchanges,
     Homepage,
     Cryptocurrencies,
     News,
@@ -25,11 +24,6 @@ const App = () => {
                                 exact
                                 path="/"
                                 element={<Homepage />}
-                            ></Route>
-                            <Route
-                                exact
-                                path="/exchanges"
-                                element={<Exchanges />}
                             ></Route>
                             <Route
                                 exact
@@ -60,7 +54,7 @@ const App = () => {
                     </Typography.Title>
                     <Space>
                         <Link to="/">Home</Link>
-                        <Link to="/exchanges">Exchanges</Link>
+                        <Link to="/cryptocurrencies">Cryptocurrencies</Link>
                         <Link to="/news">News</Link>
                     </Space>
                 </div>

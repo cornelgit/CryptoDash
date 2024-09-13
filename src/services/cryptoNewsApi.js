@@ -1,11 +1,11 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const cryptoNewsHeaders = {
-    "x-rapidapi-key": "c25a2042e4msh9410e47178c9ea9p15db72jsn7f035fa1e65e",
-    "x-rapidapi-host": "cryptocurrency-news2.p.rapidapi.com",
+    "x-rapidapi-key": import.meta.env.VITE_API_URL_NEWS_KEY,
+    "x-rapidapi-host": import.meta.env.VITE_API_URL_NEWS_HOST,
 };
 
-const baseUrl = "https://cryptocurrency-news2.p.rapidapi.com/v1";
+const baseUrl = import.meta.env.VITE_API_URL_NEWS;
 
 const createRequest = (url) => ({
     url,

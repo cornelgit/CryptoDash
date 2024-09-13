@@ -3,7 +3,6 @@ import { Button, Menu, Typography, Avatar } from "antd";
 import { Link, useLocation } from "react-router-dom";
 import {
     HomeOutlined,
-    MoneyCollectOutlined,
     BulbOutlined,
     FundOutlined,
     MenuOutlined,
@@ -41,11 +40,6 @@ const Navbar = () => {
             key: "cryptocurrencies",
             icon: <FundOutlined />,
             label: <Link to="/cryptocurrencies">Cryptocurrencies</Link>,
-        },
-        {
-            key: "exchanges",
-            icon: <MoneyCollectOutlined />,
-            label: <Link to="/exchanges">Exchanges</Link>,
         },
         {
             key: "news",
