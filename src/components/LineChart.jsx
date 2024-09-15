@@ -25,13 +25,15 @@ function LineChart({ coinHistory, currentPrice, coinName }) {
     const coinPrice = [];
     const coinTimestamp = [];
 
-    for (let i = 0; i < coinHistory?.data?.history?.length; ++i) {
-        coinPrice.unshift(coinHistory.data.history[i].price);
-        coinTimestamp.unshift(
-            new Date(
-                coinHistory?.data?.history[i].timestamp * 1000
-            ).toLocaleString()
-        );
+    for (let i = coinHistory?.data?.history?.length - 1; i >= 0; --i) {
+        if (coinHistory.data.history[i].price !== null) {
+            coinPrice.push(coinHistory.data.history[i].price);
+            coinTimestamp.push(
+                new Date(
+                    coinHistory?.data?.history[i].timestamp * 1000
+                ).toLocaleString()
+            );
+        }
     }
 
     const data = {
