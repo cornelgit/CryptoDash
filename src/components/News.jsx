@@ -11,7 +11,7 @@ const demoImage =
 
 const News = ({ simplified }) => {
     const { data: cryptoNews } = useGetCryptoNewsQuery();
-    const newsCount = simplified ? 6 : 12;
+    const newsCount = simplified ? 6 : 30;
 
     if (!cryptoNews) {
         return <Loader />;

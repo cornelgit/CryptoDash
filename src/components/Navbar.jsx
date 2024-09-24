@@ -39,7 +39,7 @@ const Navbar = () => {
         {
             key: "cryptocurrencies",
             icon: <FundOutlined />,
-            label: <Link to="/cryptocurrencies">Cryptocurrencies</Link>,
+            label: <Link to="/cryptocurrencies">Crypto</Link>,
         },
         {
             key: "news",
