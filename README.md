@@ -1,3 +1,5 @@
+![Alt text](src/images/proj2.png)
+
 # Crypto Dash
 
 ## Author
