@@ -1,4 +1,3 @@
-import React from "react";
 import millify from "millify";
 import { Typography, Row, Col, Statistic, Divider } from "antd";
 import { Link } from "react-router-dom";
@@ -9,11 +8,19 @@ import Loader from "./Loader";
 const { Title } = Typography;
 
 const Homepage = () => {
-    const { data, isFetching } = useGetCryptosQuery(12);
+    const { data, isFetching, error } = useGetCryptosQuery(12);
     const globalStats = data?.data?.stats;
 
     if (isFetching) {
         return <Loader />;
+    }
+
+    if (error) {
+        return <div>Error fetching data. Please try again later.</div>;
+    }
+
+    if (!globalStats) {
+        return <div>Error loading global statistics.</div>;
     }
 
     return (
