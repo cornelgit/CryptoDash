@@ -1,4 +1,3 @@
-import React from "react";
 import { Col, Row, Typography } from "antd";
 import {
     Chart as ChartJS,
