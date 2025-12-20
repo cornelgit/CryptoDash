@@ -19,7 +19,7 @@ import {
 } from "../services/cryptoApi";
 import LineChart from "./LineChart";
 import Loader from "./Loader";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const { Title, Text } = Typography;
 const { Option } = Select;
